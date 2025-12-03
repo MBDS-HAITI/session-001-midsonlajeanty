@@ -27,7 +27,7 @@ header {
 header img {
   height: 5rem;
   width: 10rem;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 header h1 {
