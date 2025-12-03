@@ -1,0 +1,68 @@
+:root {
+  --color-A: #4CAF50;
+  --color-B: #2196F3;
+  --color-C: #FFC107;
+  --color-Fail: #F44336;
+  --color-text-primary: #333;
+  --color-text-secondary: #777;
+  --color-background: #ffffff;
+  --color-border: #eeeeee;
+}
+
+.course-card {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-background);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-left: 5px solid blue;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.course-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.course-card.course-A {
+  border-left-color: var(--color-A);
+}
+
+.course-card-course {
+  margin: 0 0 5px 0;
+  color: var(--color-text-primary);
+  font-size: 1.5em;
+}
+
+.course-card-student-name {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+.course-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--color-border);
+}
+
+.course-card-detail {
+  color: #555;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.course-card-detail:last-child {
+  margin-bottom: 0;
+}
+
+.course-card-score {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: blue;
+}
