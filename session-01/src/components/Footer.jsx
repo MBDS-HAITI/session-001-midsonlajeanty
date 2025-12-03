@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer>&copy; Tous droits réservés - LAJEANTY Louis Midson</footer>
+    <footer>&copy; {new Date().getFullYear()} - LAJEANTY Louis Midson, Tous droits réservés</footer>
   )
 }
