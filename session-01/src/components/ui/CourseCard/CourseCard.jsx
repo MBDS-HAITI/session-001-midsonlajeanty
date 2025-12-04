@@ -1,10 +1,7 @@
 import "./CourseCard.css";
-import data from "../../../data/data.json";
-const randomIndex = Math.floor(Math.random() * data.length);
 
-export default function CourseCard() {
-  const randomItem = data[randomIndex];
-  const { course, student, date, grade, unique_id } = randomItem;
+export default function CourseCard({ item }) {
+  const { course, student, date, grade, unique_id } = item;
 
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
@@ -32,9 +29,7 @@ export default function CourseCard() {
           </p>
         </div>
 
-        <div className="course-card-score">
-          {grade}
-        </div>
+        <div className="course-card-score">{grade}</div>
       </div>
     </div>
   );
