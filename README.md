@@ -17,6 +17,7 @@ npm run dev
 6. Créer un commit avec le message "TD00 : Initialisation du projet"
 7. Push
 
+![Image !](./screenshots/1.png)
 
 ## TD01 : Votre premier composant React 
 1. Créer un composant Header contenant les éléments suivant :
@@ -30,6 +31,7 @@ npm run dev
 5. Commit avec le message "TD01 : Ajouter un footer"
 6. Push 
 
+![Image 2](./screenshots/2.png)
 
 ## TD02 : Contenu dynamique 
 1. Modifier le composant MainContent du TD précédent pour afficher le texte suivant "Bonjour, on est le [Jour], [Mois], [Annee] et il est [Heure]:[Minute]:[Second]"
@@ -37,6 +39,8 @@ npm run dev
 3. Modifier le footer pour y afficher également l'année, au format "© [Annee] - [Prenom].[Nom], Tous droits réservés."
 4. Commit avec le message "TD02 : Afficher l'année dans le Footer"
 5. Push
+
+![Image 3](./screenshots/3.png)
 
 ## TD03 : Utiliser les props 
 1. Considérer les données du fichier data.json
@@ -46,12 +50,16 @@ npm run dev
 4. Commit avec le message "TD03 : Afficher les détails d'une note"
 5. Push
 
+![Image 4](./screenshots/4.png)
+
 ## TD04 : Gestion d'événements 
 1. Ajouter un menu en haut à gauche de votre application
 2. Considérer les éléments suivants (Notes, Etudiants, Matières, A propos) 
 3. Afficher une alerte contenu le text de l’élément cliqué
 4. Commit avec le message “Add menu”
 5. Push
+
+![Image 5](./screenshots/5.png)
 
 # Session 02 : Gestion des listes dynamiques
 ## Objectifs de la session : 
@@ -68,6 +76,8 @@ npm run dev
 > Pour l'instant, afficher simplement un text avec le nom du menu dans le contenu de chaque composant, on les complètera dans les étapes suivantes
 - Commit avec le messaage "TD04 : Gestion de menu dynamique"
 
+![Image 6](./screenshots/6.png)
+
 ## Etape 2: Gestion de données des composants 
 Dans cette section, vous allez gérer le contenu des composants liés au menu en utilisant des liste d'objects statiques. Pour cela, récupérer le fichier data.json et importez les dans un dossier data de votre projet. 
 
@@ -80,6 +90,11 @@ Dans cette section, vous allez gérer le contenu des composants liés au menu en
 5. Push
 > Répéter les étapes 1 à 5 pour les composants Notes, Etudiants et Matières.
 > Remplir le composant lié au Menu A propos avec vos coordonnées (eg. Ce projet est réalisé par XXX YYYY)
+
+![Image 7](./screenshots/7.png)
+![Image 8](./screenshots/8.png)
+![Image 9](./screenshots/9.png)
+![Image 10](./screenshots/10.png)
 
 ## Etape 3: Optimisez la page 
 1. Mettre à jour le CSS pour avoir un rendu plus user-friendly
