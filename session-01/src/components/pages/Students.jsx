@@ -5,8 +5,18 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import { useState, useEffect } from "react";
 
-export default function Students({ data }) {
+export default function Students() {
+  const [students, setStudents] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8010/api/students")
+      .then((response) => response.json())
+      .then((data) => setStudents(data))
+      .catch((error) => console.error("Error fetching students:", error));
+  }, []);
+
   return (
     <div>
       <h2>Étudiants</h2>
@@ -20,16 +30,16 @@ export default function Students({ data }) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data.map((row) => (
+            {students.map((student) => (
               <TableRow
-                key={row.student.id}
+                key={student._id}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
-                  {row.student.id}
+                  {student._id}
                 </TableCell>
-                <TableCell align="center">{row.student.firstname}</TableCell>
-                <TableCell align="center">{row.student.lastname}</TableCell>
+                <TableCell align="center">{student.firstName}</TableCell>
+                <TableCell align="center">{student.lastName}</TableCell>
               </TableRow>
             ))}
           </TableBody>

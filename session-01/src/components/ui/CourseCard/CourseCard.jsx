@@ -1,9 +1,8 @@
 import "./CourseCard.css";
 
-export default function CourseCard({ item }) {
-  const { course, student, date, grade, unique_id } = item;
+export default function CourseCard({ grade }) {
 
-  const formattedDate = new Date(date).toLocaleDateString("en-US", {
+  const formattedDate = new Date(grade.date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -11,9 +10,9 @@ export default function CourseCard({ item }) {
 
   return (
     <div className="course-card">
-      <h2 className="course-card-course">{course}</h2>
+      <h2 className="course-card-course">{grade.course.name}</h2>
       <h3 className="course-card-student-name">
-        {student.firstname} {student.lastname}
+        {grade.student.firstName} {grade.student.lastName}
       </h3>
 
       <div className="course-card-content">
@@ -22,14 +21,14 @@ export default function CourseCard({ item }) {
             <strong>Date:</strong> {formattedDate}
           </p>
           <p className="course-card-detail">
-            <strong>Student ID:</strong> {student.id}
+            <strong>Student ID:</strong> {grade.student._id}
           </p>
           <p className="course-card-detail">
-            <strong>Item ID:</strong> {unique_id}
+            <strong>Item ID:</strong> {grade._id}
           </p>
         </div>
 
-        <div className="course-card-score">{grade}</div>
+        <div className="course-card-score">{grade.grade}</div>
       </div>
     </div>
   );
